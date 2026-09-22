@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dukkanatakent-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dukkanatakent-frontend
+    restart: unless-stopped
+    ports:
+      - "3008:3008"
+    environment:
+      - NODE_ENV=production
